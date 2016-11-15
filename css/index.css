@@ -27,8 +27,34 @@ body {
     padding: 50px 
 }
 
-#about-head {
-    text-align: center
+@keyframes slideRight {
+    0% {
+        transformX: -500px
+    }
+
+    100% {
+        transformX: 0px
+    }
+}
+
+.slider.slide-right {
+    opacity: 0;
+    transition: all 1000ms linear;
+    -webkit-transition: all 1000ms linear;
+    -moz-transition: all 1000ms linear;
+    -o-transition: all 1000ms linear;
+    transform: translatex(-500px);
+    -webkit-transform: translatex(-500px);
+    -moz-transform: translatex(-500px);
+    -o-transform: translatex(-500px);
+}
+
+.slider.slide-right.in-view {
+    opacity: 1;
+    transform: translatex(0px);
+    -webkit-transform: translatex(0px);
+    -moz-transform: translatex(0px);
+    -o-transform: translatex(0px);
 }
 #email {
     color: black
